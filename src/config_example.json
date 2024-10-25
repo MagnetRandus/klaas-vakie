@@ -1,0 +1,11 @@
+{
+  "server": {
+    "clientkey": "",
+    "maxRequestsPerMinute": 30,
+    "port": 443,
+    "options": {
+      "key": "",
+      "cert": ""
+    }
+  }
+}

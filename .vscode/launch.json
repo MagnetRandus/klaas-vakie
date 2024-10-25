@@ -1,0 +1,34 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Copy Assets",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run-script", "copy-assets"],
+      "stopOnEntry": false
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch via NPM",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run-script", "build"],
+      "stopOnEntry": false
+    },    {
+      "name": "Attach",
+      "port": 9229,
+      "request": "attach",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "node",
+      "cwd": "${workspaceFolder}/dist"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Start All",
+      "configurations": ["Copy Assets", "Launch via NPM", "Attach"]
+    }
+  ]
+}

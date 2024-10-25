@@ -1,0 +1,62 @@
+{
+  "name": "klaas-vakie",
+  "version": "0.0.1",
+  "description": "Web Service for Klasie",
+  "main": "main.js",
+  "engines": {
+    "node": "20.11.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "copy-assets": "node copy-assets.js",
+    "build": "tsc && nodemon --inspect=9229 'dist/main.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MagnetRandus/klaas-vakie.git"
+  },
+  "keywords": [
+    "geselsie"
+  ],
+  "author": "MagnetRandus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MagnetRandus/klaas-vakie/issues"
+  },
+  "homepage": "https://github.com/MagnetRandus/klaas-vakie#readme",
+  "_moduleAliases": {
+    "@toolbox": "./dist/api/utils/toolbox.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "module-alias": "^2.2.3",
+    "openai": "^4.32.1"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": true,
+    "overrides": [
+      {
+        "files": [
+          ".prettierrc"
+        ],
+        "options": {
+          "parser": "json"
+        }
+      }
+    ]
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.5",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.17",
+    "chokidar": "^3.6.0",
+    "fs-extra": "^11.2.0",
+    "gulp-changed": "^5.0.2",
+    "nodemon": "^3.1.0",
+    "typescript": "^5.4.3"
+  }
+}
